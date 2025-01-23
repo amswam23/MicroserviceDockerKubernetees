@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot1-sample
+  labels:
+    app: springboot1-sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot1-sample
+  template:
+    metadata:
+      labels:
+        app: springboot1-sample
+    spec:
+      containers:
+      - name: springboot1-sample
+        image: my-springboot-app:latest
+        ports:
+        - containerPort: 9191
+
+      
