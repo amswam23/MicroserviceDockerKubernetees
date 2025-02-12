@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 public class EntryController {
 
-    //function to retun a message to the user
+    //function to retun a message to the users
     @GetMapping("/message")
     public String displayMessage(){
         String message = "Welcome to spring boot application";
